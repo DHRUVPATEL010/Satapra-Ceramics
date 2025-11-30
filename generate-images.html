@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator for SATAPARA CERAMIC TRADE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-item {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .image-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .download-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .download-btn:hover {
+            background: #c0392b;
+        }
+        .instructions {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SATAPARA CERAMIC TRADE - Image Generator</h1>
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>This page generates placeholder images for the ceramic trade website. Right-click on each image and select "Save image as..." to download them to your images folder.</p>
+            <p>Make sure to save them with the correct filenames as shown below each image.</p>
+        </div>
+        
+        <h2>Main Category Images</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img id="wall-tiles" alt="Wall Tiles">
+                <p>wall-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('wall-tiles', 'wall-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="floor-tiles" alt="Floor Tiles">
+                <p>floor-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('floor-tiles', 'floor-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="bathroom-tiles" alt="Bathroom Tiles">
+                <p>bathroom-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('bathroom-tiles', 'bathroom-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="kitchen-tiles" alt="Kitchen Tiles">
+                <p>kitchen-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('kitchen-tiles', 'kitchen-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="parking-tiles" alt="Parking Tiles">
+                <p>parking-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('parking-tiles', 'parking-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="sanitary-ware" alt="Sanitary Ware">
+                <p>sanitary-ware.jpg</p>
+                <button class="download-btn" onclick="downloadImage('sanitary-ware', 'sanitary-ware.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="vitrified-tiles" alt="Vitrified Tiles">
+                <p>vitrified-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('vitrified-tiles', 'vitrified-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="ceramic-tiles" alt="Ceramic Tiles">
+                <p>ceramic-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('ceramic-tiles', 'ceramic-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="porcelain-tiles" alt="Porcelain Tiles">
+                <p>porcelain-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('porcelain-tiles', 'porcelain-tiles.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="marble-tiles" alt="Marble Tiles">
+                <p>marble-tiles.jpg</p>
+                <button class="download-btn" onclick="downloadImage('marble-tiles', 'marble-tiles.jpg')">Download</button>
+            </div>
+        </div>
+
+        <h2>About Us Images</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img id="warehouse" alt="Warehouse">
+                <p>warehouse.jpg</p>
+                <button class="download-btn" onclick="downloadImage('warehouse', 'warehouse.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="showroom" alt="Showroom">
+                <p>showroom.jpg</p>
+                <button class="download-btn" onclick="downloadImage('showroom', 'showroom.jpg')">Download</button>
+            </div>
+            <div class="image-item">
+                <img id="team" alt="Team">
+                <p>team.jpg</p>
+                <button class="download-btn" onclick="downloadImage('team', 'team.jpg')">Download</button>
+            </div>
+        </div>
+
+        <h2>Placeholder Image</h2>
+        <div class="image-grid">
+            <div class="image-item">
+                <img id="placeholder" alt="Placeholder">
+                <p>placeholder.jpg</p>
+                <button class="download-btn" onclick="downloadImage('placeholder', 'placeholder.jpg')">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate placeholder images using canvas
+        function generateImage(text, color, bgColor) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 400;
+            canvas.height = 300;
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, 400, 300);
+            
+            // Add gradient
+            const gradient = ctx.createLinearGradient(0, 0, 400, 300);
+            gradient.addColorStop(0, bgColor);
+            gradient.addColorStop(1, color);
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 300);
+            
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, 200, 150);
+            
+            // Add some decorative elements
+            ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(200, 150, 100, 0, 2 * Math.PI);
+            ctx.stroke();
+            
+            return canvas.toDataURL();
+        }
+        
+        // Generate all images
+        const images = {
+            'wall-tiles': generateImage('WALL TILES', '#e74c3c', '#2c3e50'),
+            'floor-tiles': generateImage('FLOOR TILES', '#3498db', '#2c3e50'),
+            'bathroom-tiles': generateImage('BATHROOM TILES', '#9b59b6', '#2c3e50'),
+            'kitchen-tiles': generateImage('KITCHEN TILES', '#f39c12', '#2c3e50'),
+            'parking-tiles': generateImage('PARKING TILES', '#95a5a6', '#2c3e50'),
+            'sanitary-ware': generateImage('SANITARY WARE', '#1abc9c', '#2c3e50'),
+            'vitrified-tiles': generateImage('VITRIFIED TILES', '#e67e22', '#2c3e50'),
+            'ceramic-tiles': generateImage('CERAMIC TILES', '#34495e', '#ecf0f1'),
+            'porcelain-tiles': generateImage('PORCELAIN TILES', '#8e44ad', '#2c3e50'),
+            'marble-tiles': generateImage('MARBLE TILES', '#bdc3c7', '#2c3e50'),
+            'warehouse': generateImage('WAREHOUSE', '#27ae60', '#2c3e50'),
+            'showroom': generateImage('SHOWROOM', '#e74c3c', '#2c3e50'),
+            'team': generateImage('OUR TEAM', '#3498db', '#2c3e50'),
+            'placeholder': generateImage('IMAGE', '#95a5a6', '#ecf0f1')
+        };
+        
+        // Set image sources
+        Object.keys(images).forEach(key => {
+            const img = document.getElementById(key);
+            if (img) {
+                img.src = images[key];
+            }
+        });
+        
+        // Download function
+        function downloadImage(id, filename) {
+            const img = document.getElementById(id);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = img.src;
+            link.click();
+        }
+    </script>
+</body>
+</html>
