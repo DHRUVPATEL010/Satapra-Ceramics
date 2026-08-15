@@ -131,7 +131,7 @@ function Hero() {
         <div className="fade-in-up">
           <div className="flex items-center gap-3 mb-6">
             <div className="h-px w-12" style={{ background: '#C9A96E' }} />
-            <span className="text-xs font-medium tracking-[0.3em] uppercase" style={{ color: '#C9A96E' }}>Trusted Since 2009 · India</span>
+            <span className="text-xs font-medium tracking-[0.3em] uppercase" style={{ color: '#C9A96E' }}>Trusted Since 2017 · India</span>
           </div>
           <h1 className="font-serif text-white mb-6 leading-[0.92]" style={{ fontSize: 'clamp(44px, 6.5vw, 86px)', maxWidth: 760 }}>
             Premium Ceramic Tiles<br />
@@ -305,7 +305,7 @@ function WhySatapara() {
             { num: '1000', suffix: '+', label: 'Happy Customers' },
             { num: '500', suffix: '+', label: 'Projects Supplied' },
             { num: '50', suffix: '+', label: 'Trusted Brands' },
-            { num: '15', suffix: '+', label: 'Years Experience' },
+            { num: '9', suffix: '+', label: 'Years Experience' },
           ].map(s => (
             <div key={s.label} className="text-center p-6 rounded-2xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
               <p className="font-serif mb-1" style={{ fontSize: 'clamp(32px, 4vw, 52px)', color: '#C9A96E' }}>
@@ -776,7 +776,7 @@ function About() {
                 </div>
                 <div>
                   <p className="text-white font-medium text-sm">Trusted Trading Partner</p>
-                  <p className="text-white/50 text-xs mt-0.5">Serving Gujarat since 2009</p>
+                  <p className="text-white/50 text-xs mt-0.5">Serving Gujarat since 2017</p>
                 </div>
               </div>
             </div>
@@ -789,7 +789,7 @@ function About() {
               <em style={{ color: '#E8DFD5' }}>Ceramic Partner</em>
             </h2>
             <p className="text-white/55 leading-relaxed mb-6" style={{ fontSize: 15 }}>
-              Satapara Ceramic is a leading ceramic tiles and sanitaryware trading company based in Gujarat. Since 2009, we have built our reputation on a simple promise: an unmatched product range, honest pricing, and service that genuinely supports our customers.
+              Satapara Ceramic is a leading ceramic tiles and sanitaryware trading company based in Gujarat. Since 2017, we have built our reputation on a simple promise: an unmatched product range, honest pricing, and service that genuinely supports our customers.
             </p>
             <p className="text-white/40 leading-relaxed mb-10" style={{ fontSize: 14 }}>
               From individual homeowners tiling a single bathroom to builders delivering 500-unit residential towers, we provide the same expert guidance, competitive rates, and reliable supply that our 1,000+ customers rely on.
