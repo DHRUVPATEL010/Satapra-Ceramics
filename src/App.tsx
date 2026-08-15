@@ -481,10 +481,10 @@ function ForProfessionals() {
 function RoomVisualizer() {
   const [room, setRoom] = useState(0)
   const rooms = [
-    { label: 'Bathroom', img: 'https://images.unsplash.com/photo-1754447628644-b2dc91ce3237?w=1200&h=800&fit=crop&auto=format' },
-    { label: 'Kitchen', img: 'https://images.unsplash.com/photo-1683629357963-adf2b1fa9ad9?w=1200&h=800&fit=crop&auto=format' },
-    { label: 'Living Room', img: 'https://images.unsplash.com/photo-1783125127053-db9f268a847b?w=1200&h=800&fit=crop&auto=format' },
-    { label: 'Hotel Lobby', img: 'https://images.unsplash.com/photo-1782718979595-be6003fc498e?w=1200&h=800&fit=crop&auto=format' },
+    { label: 'Bathroom', collection: 'Marble Finish · 80×80cm', img: 'https://images.unsplash.com/photo-1754447628644-b2dc91ce3237?w=1200&h=800&fit=crop&auto=format' },
+    { label: 'Kitchen', collection: 'Wood Finish · 20×120cm', img: 'https://images.unsplash.com/photo-1683629357963-adf2b1fa9ad9?w=1200&h=800&fit=crop&auto=format' },
+    { label: 'Living Room', collection: 'Matt Finish · 60×120cm', img: 'https://images.unsplash.com/photo-1783125127053-db9f268a847b?w=1200&h=800&fit=crop&auto=format' },
+    { label: 'Hotel Lobby', collection: 'High Gloss · 120×120cm', img: 'https://images.unsplash.com/photo-1782718979595-be6003fc498e?w=1200&h=800&fit=crop&auto=format' },
   ]
 
   return (
@@ -509,18 +509,9 @@ function RoomVisualizer() {
         <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ height: 'clamp(300px, 52vw, 560px)' }}>
           <img key={rooms[room].img} src={rooms[room].img} alt={rooms[room].label} className="w-full h-full object-cover transition-all duration-700" />
           <div className="absolute inset-0 flex items-end p-8">
-            <div className="glass rounded-2xl px-6 py-4 flex items-center gap-6">
-              <div>
-                <p className="text-white/55 text-xs mb-0.5">Suggested Collection</p>
-                <p className="text-white font-medium text-sm">Marble Finish · 80×80cm</p>
-              </div>
-              <div className="h-8 w-px" style={{ background: 'rgba(255,255,255,0.2)' }} />
-              <div>
-                <p className="text-white/55 text-xs mb-0.5">Starting</p>
-                <p className="text-white font-medium text-sm">₹85/sq.ft</p>
-              </div>
-              <div className="h-8 w-px" style={{ background: 'rgba(255,255,255,0.2)' }} />
-              <button className="px-5 py-2 rounded-xl text-xs font-medium text-white" style={{ background: '#C9A96E' }}>Request Quote</button>
+            <div className="glass rounded-2xl px-6 py-4">
+              <p className="text-white/55 text-xs mb-0.5">Suggested Collection</p>
+              <p className="text-white font-medium text-sm">{rooms[room].collection}</p>
             </div>
           </div>
           <div className="glass-dark absolute top-6 right-6 rounded-xl px-4 py-2">
