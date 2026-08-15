@@ -38,7 +38,6 @@ function Nav() {
     { name: 'Products', href: '#products' },
     { name: 'Collections', href: '#collections' },
     { name: 'Brands', href: '#brands' },
-    { name: 'Projects', href: '#projects' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -523,75 +522,7 @@ function RoomVisualizer() {
   )
 }
 
-// ─── PROJECT SHOWCASE ──────────────────────────────────────────────────────────
-function Projects() {
-  const items = [
-    { name: 'Skyline Residences, Ahmedabad', category: 'Residential', img: 'https://images.unsplash.com/photo-1754447628644-b2dc91ce3237?w=900&h=600&fit=crop&auto=format' },
-    { name: 'Grand Hyatt Lobby, Surat', category: 'Hospitality', img: 'https://images.unsplash.com/photo-1667550177753-52b318cd4d40?w=600&h=500&fit=crop&auto=format' },
-    { name: 'Zara Flagship, Vadodara', category: 'Retail', img: 'https://images.unsplash.com/photo-1781249144216-143445323087?w=600&h=500&fit=crop&auto=format' },
-    { name: 'ITC Hotel, Rajkot', category: 'Hospitality', img: 'https://images.unsplash.com/photo-1782718979595-be6003fc498e?w=900&h=600&fit=crop&auto=format' },
-  ]
-  const [filter, setFilter] = useState('All')
-  const filters = ['All', 'Residential', 'Hospitality', 'Retail']
 
-  return (
-    <section id="projects" className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
-      <div className="max-w-screen-xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <p className="text-xs font-medium tracking-[0.3em] uppercase mb-4" style={{ color: '#C9A96E' }}>Projects Supplied</p>
-            <h2 className="font-serif leading-tight" style={{ fontSize: 'clamp(36px, 5vw, 60px)', color: '#111' }}>
-              Projects We've<br /><em>Powered</em>
-            </h2>
-          </div>
-          <div className="flex gap-2 flex-wrap">
-            {filters.map(f => (
-              <button key={f} onClick={() => setFilter(f)} className="px-4 py-2 rounded-full text-xs font-medium transition-all duration-300"
-                style={filter === f ? { background: '#222', color: 'white' } : { border: '1px solid #E8DFD5', color: '#555' }}>
-                {f}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 card-lift group relative rounded-3xl overflow-hidden cursor-pointer" style={{ height: 440, background: '#E8DFD5' }}>
-            <img src={items[0].img} alt={items[0].name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(17,17,17,0.75) 0%, transparent 50%)' }} />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <span className="text-xs font-medium px-3 py-1 rounded-full mb-3 inline-block" style={{ background: '#C9A96E', color: 'white' }}>{items[0].category}</span>
-              <h3 className="font-serif text-white text-2xl">{items[0].name}</h3>
-            </div>
-          </div>
-          <div className="flex flex-col gap-4">
-            {[items[1], items[2]].map(p => (
-              <div key={p.name} className="card-lift group relative rounded-3xl overflow-hidden cursor-pointer flex-1" style={{ minHeight: 210, background: '#E8DFD5' }}>
-                <img src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(17,17,17,0.75) 0%, transparent 55%)' }} />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="text-xs font-medium px-2.5 py-1 rounded-full mb-2 inline-block" style={{ background: '#C9A96E', color: 'white' }}>{p.category}</span>
-                  <h3 className="font-serif text-white text-lg">{p.name}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="lg:col-span-3 card-lift group relative rounded-3xl overflow-hidden cursor-pointer" style={{ height: 320, background: '#E8DFD5' }}>
-            <img src={items[3].img} alt={items[3].name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(17,17,17,0.75) 0%, transparent 50%)' }} />
-            <div className="absolute left-0 top-0 bottom-0 flex flex-col justify-center p-10">
-              <span className="text-xs font-medium px-3 py-1 rounded-full mb-4 inline-block w-fit" style={{ background: '#C9A96E', color: 'white' }}>{items[3].category}</span>
-              <h3 className="font-serif text-white text-3xl max-w-sm">{items[3].name}</h3>
-              <button className="mt-6 flex items-center gap-2 text-white/65 text-sm hover:text-white transition-colors">
-                View Project
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // ─── BEFORE / AFTER ────────────────────────────────────────────────────────────
 function BeforeAfter() {
@@ -1009,7 +940,6 @@ export default function App() {
       <Showroom />
       <ForProfessionals />
       <RoomVisualizer />
-      <Projects />
       <BeforeAfter />
       <Gallery />
       <Testimonials />
