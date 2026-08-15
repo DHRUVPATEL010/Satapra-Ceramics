@@ -407,8 +407,7 @@ function Showroom() {
               ))}
             </div>
             <div className="flex gap-3">
-              <button className="px-7 py-4 rounded-full text-sm font-medium text-white" style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)' }}>Book a Visit</button>
-              <button className="px-7 py-4 rounded-full text-sm font-medium text-white/70" style={{ border: '1px solid rgba(255,255,255,0.15)' }}>Get Directions</button>
+              <a href="#contact" className="px-7 py-4 rounded-full text-sm font-medium text-white/70 inline-block transition-all hover:text-white hover:border-white/40" style={{ border: '1px solid rgba(255,255,255,0.15)' }}>Get Directions</a>
             </div>
           </div>
 
