@@ -33,24 +33,34 @@ function Nav() {
 
   const linkColor = scrolled ? '#222' : 'rgba(255,255,255,0.85)'
 
+  const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'Products', href: '#products' },
+    { name: 'Collections', href: '#collections' },
+    { name: 'Brands', href: '#brands' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Contact', href: '#contact' },
+  ]
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style={scrolled ? { background: 'rgba(250,250,248,0.93)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(201,197,193,0.3)' } : {}}>
       <div className="max-w-screen-xl mx-auto px-8 flex items-center justify-between h-20">
-        <div style={{ color: scrolled ? '#111' : 'white' }}>
+        <a href="#home" className="cursor-pointer" style={{ color: scrolled ? '#111' : 'white' }}>
           <LogoMark size={30} />
-        </div>
+        </a>
 
         <div className="hidden lg:flex items-center gap-8">
-          {['Home', 'Products', 'Collections', 'Brands', 'Projects', 'About Us', 'Contact'].map(item => (
+          {navItems.map(item => (
             <a
-              key={item}
-              href="#"
+              key={item.name}
+              href={item.href}
               className="text-xs font-medium tracking-wide transition-colors duration-200"
               style={{ color: linkColor, fontFamily: 'Inter' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#C9A96E')}
               onMouseLeave={e => (e.currentTarget.style.color = linkColor)}
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </div>
@@ -64,8 +74,8 @@ function Nav() {
 
       {menuOpen && (
         <div className="lg:hidden px-8 pb-6 pt-2" style={{ background: 'rgba(250,250,248,0.98)', backdropFilter: 'blur(20px)' }}>
-          {['Home', 'Products', 'Collections', 'Brands', 'Projects', 'About Us', 'Contact'].map(item => (
-            <a key={item} href="#" className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100">{item}</a>
+          {navItems.map(item => (
+            <a key={item.name} href={item.href} onClick={() => setMenuOpen(false)} className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100">{item.name}</a>
           ))}
         </div>
       )}
@@ -76,7 +86,7 @@ function Nav() {
 // ─── HERO ──────────────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: '100svh', minHeight: 680, background: '#111' }}>
+    <section id="home" className="relative w-full overflow-hidden" style={{ height: '100svh', minHeight: 680, background: '#111' }}>
       <img
         src="https://images.unsplash.com/photo-1756079664354-34944e001f6d?w=1920&h=1080&fit=crop&auto=format"
         alt="Premium ceramic tile showroom atmosphere"
@@ -173,7 +183,7 @@ function ProductCategories() {
   ]
 
   return (
-    <section className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
+    <section id="products" className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
       <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
@@ -227,7 +237,7 @@ function FeaturedCollections() {
   const col = collections[active]
 
   return (
-    <section className="py-28" style={{ background: '#111' }}>
+    <section id="collections" className="py-28" style={{ background: '#111' }}>
       <div className="max-w-screen-xl mx-auto px-8 md:px-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
@@ -373,7 +383,7 @@ function Brands() {
   ]
 
   return (
-    <section className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
+    <section id="brands" className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
       <div className="max-w-screen-xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs font-medium tracking-[0.3em] uppercase mb-4" style={{ color: '#C9A96E' }}>Brand Partners</p>
@@ -569,7 +579,7 @@ function Projects() {
   const filters = ['All', 'Residential', 'Hospitality', 'Retail']
 
   return (
-    <section className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
+    <section id="projects" className="py-28 px-8 md:px-16" style={{ background: '#FAFAF8' }}>
       <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
@@ -778,7 +788,7 @@ function Testimonials() {
 // ─── ABOUT ────────────────────────────────────────────────────────────────────
 function About() {
   return (
-    <section className="py-28 px-8 md:px-16" style={{ background: '#111' }}>
+    <section id="about" className="py-28 px-8 md:px-16" style={{ background: '#111' }}>
       <div className="max-w-screen-xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
@@ -850,7 +860,7 @@ function BrandMarquee() {
 // ─── CONTACT ─────────────────────────────────────────────────────────────────
 function Contact() {
   return (
-    <section className="py-28 px-8 md:px-16" style={{ background: '#E8DFD5' }}>
+    <section id="contact" className="py-28 px-8 md:px-16" style={{ background: '#E8DFD5' }}>
       <div className="max-w-screen-xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left info */}
@@ -985,9 +995,17 @@ function Footer() {
             <div key={col.title}>
               <p className="text-xs font-medium tracking-[0.2em] uppercase mb-5" style={{ color: '#C9A96E' }}>{col.title}</p>
               <ul className="space-y-3">
-                {col.links.map(link => (
-                  <li key={link}><a href="#" className="text-xs text-white/30 hover:text-white/60 transition-colors duration-200">{link}</a></li>
-                ))}
+                {col.links.map(link => {
+                  let href = '#home'
+                  if (col.title === 'Products') href = '#products'
+                  else if (col.title === 'Brands') href = '#brands'
+                  else if (link === 'About Us') href = '#about'
+                  else if (link === 'Projects') href = '#projects'
+                  else if (link === 'Contact') href = '#contact'
+                  return (
+                    <li key={link}><a href={href} className="text-xs text-white/30 hover:text-white/60 transition-colors duration-200">{link}</a></li>
+                  )
+                })}
               </ul>
             </div>
           ))}
