@@ -472,12 +472,6 @@ function ForProfessionals() {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <button className="px-10 py-4 rounded-full text-sm font-medium text-white" style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)', boxShadow: '0 8px 24px rgba(201,169,110,0.28)' }}>
-            Register as Trade Partner
-          </button>
-        </div>
       </div>
     </section>
   )
