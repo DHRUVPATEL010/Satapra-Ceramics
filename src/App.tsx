@@ -206,10 +206,6 @@ function ProductCategories() {
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-white/55 text-xs tracking-wide mb-1">{cat.count} products</p>
                 <h3 className="font-serif text-white text-base leading-snug">{cat.label}</h3>
-                <div className="flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
-                  <span className="text-xs font-medium" style={{ color: '#C9A96E' }}>Browse</span>
-                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#C9A96E" strokeWidth="1.5" strokeLinecap="round"/></svg>
-                </div>
               </div>
             </div>
           ))}
