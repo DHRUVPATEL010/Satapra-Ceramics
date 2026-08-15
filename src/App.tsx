@@ -864,9 +864,9 @@ function Contact() {
             <div className="space-y-5 mb-10">
               {[
                 { icon: '◈', label: 'Address', val: 'Satapara Ceramic, Main Market Road, Morbi, Gujarat – 363641' },
-                { icon: '◎', label: 'Phone', val: '+91 98765 43210' },
+                { icon: '◎', label: 'Phone', val: '+91 99099 86223' },
                 { icon: '⬡', label: 'Email', val: 'info@sataparaceramics.com' },
-                { icon: '◫', label: 'WhatsApp', val: '+91 98765 43210' },
+                { icon: '◫', label: 'WhatsApp', val: '+91 99099 86223' },
                 { icon: '◑', label: 'Business Hours', val: 'Mon–Sat 9:00 AM – 7:00 PM' },
               ].map(item => (
                 <div key={item.label} className="flex items-start gap-4 p-5 rounded-2xl bg-white/60" style={{ backdropFilter: 'blur(10px)' }}>
@@ -894,7 +894,7 @@ function Contact() {
             <div className="space-y-4">
               {[
                 { label: 'Full Name', type: 'text', placeholder: 'Rajesh Mehta' },
-                { label: 'Phone / WhatsApp', type: 'tel', placeholder: '+91 98765 43210' },
+                { label: 'Phone / WhatsApp', type: 'tel', placeholder: '+91 99099 86223' },
                 { label: 'Email Address', type: 'email', placeholder: 'rajesh@studio.com' },
                 { label: 'Project Type', type: 'text', placeholder: 'Residential / Commercial / Hotel...' },
               ].map(field => (
@@ -971,7 +971,7 @@ function Footer() {
             <div className="mb-6 text-white"><LogoMark size={28} /></div>
             <p className="text-white/30 text-xs leading-relaxed mb-6">Premium ceramic tiles &amp; sanitaryware trading company. Morbi, Gujarat.</p>
             <div className="space-y-1.5 mb-6">
-              <p className="text-white/30 text-xs">📞 +91 98765 43210</p>
+              <p className="text-white/30 text-xs">📞 +91 99099 86223</p>
               <p className="text-white/30 text-xs">✉ info@sataparaceramics.com</p>
               <p className="text-white/30 text-xs">📍 Morbi, Gujarat – 363641</p>
             </div>
@@ -1008,7 +1008,7 @@ function Footer() {
 // ─── WHATSAPP ─────────────────────────────────────────────────────────────────
 function WhatsApp() {
   return (
-    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/919909986223" target="_blank" rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
       style={{ background: '#25D366', boxShadow: '0 8px 32px rgba(37,211,102,0.4)' }}
       aria-label="Chat on WhatsApp"
