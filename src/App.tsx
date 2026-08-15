@@ -255,10 +255,6 @@ function FeaturedCollections() {
           <div className="relative rounded-3xl overflow-hidden" style={{ height: 500, background: '#1a1a1a' }}>
             <img key={col.img} src={col.img} alt={col.name} className="w-full h-full object-cover transition-all duration-700" />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(120deg, rgba(0,0,0,0.25) 0%, transparent 60%)' }} />
-            <div className="glass-dark absolute top-6 right-6 rounded-2xl px-5 py-3">
-              <p className="text-white/55 text-xs mb-0.5">Starting from</p>
-              <p className="text-white font-medium">{col.price}</p>
-            </div>
           </div>
 
           <div className="lg:pl-6">
@@ -267,7 +263,7 @@ function FeaturedCollections() {
             <h3 className="font-serif text-white mb-5" style={{ fontSize: 'clamp(30px, 3.5vw, 48px)' }}>{col.name}</h3>
             <p className="text-white/55 leading-relaxed mb-8" style={{ fontSize: 15 }}>{col.desc}</p>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
                 <p className="text-white/35 text-xs tracking-wider uppercase mb-2">Available Sizes</p>
                 <div className="flex flex-wrap gap-1.5">
@@ -278,21 +274,6 @@ function FeaturedCollections() {
                 <p className="text-white/35 text-xs tracking-wider uppercase mb-2">Finish Options</p>
                 <p className="text-white text-sm">{col.finish}</p>
               </div>
-            </div>
-
-            <div className="flex gap-3 mb-8">
-              {['#F5F0E8','#D4C9B8','#A8A09A','#2A2A2A','#C9A96E'].map((c, i) => (
-                <div key={i} className="swatch w-9 h-9 rounded-full shadow-lg" style={{ background: c, border: i === 0 ? '2px solid #C9A96E' : '2px solid rgba(255,255,255,0.1)' }} />
-              ))}
-            </div>
-
-            <div className="flex gap-4">
-              <button className="flex-1 py-4 rounded-2xl text-sm font-medium tracking-wide text-white transition-all hover:scale-[1.02]" style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)', boxShadow: '0 8px 24px rgba(201,169,110,0.28)' }}>
-                Request Sample
-              </button>
-              <button className="flex-1 py-4 rounded-2xl text-sm font-medium tracking-wide" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: 'white' }}>
-                View Collection
-              </button>
             </div>
           </div>
         </div>
