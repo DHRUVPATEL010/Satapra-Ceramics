@@ -620,57 +620,7 @@ function Gallery() {
   )
 }
 
-// ─── TESTIMONIALS ──────────────────────────────────────────────────────────────
-function Testimonials() {
-  const [active, setActive] = useState(0)
-  const testimonials = [
-    { quote: "Satapara Ceramic has been our go-to tile supplier for three years. The range is exceptional and the team genuinely understands what architects need from a trading partner.", author: "Rajesh Mehta", role: "Principal Architect, RM Design Studio", stars: 5 },
-    { quote: "We sourced all tiles and sanitaryware for a 120-unit residential project through Satapara. Competitive pricing, on-time delivery, and zero quality issues. Highly recommended.", author: "Priya Shah", role: "Builder & Developer, Shah Constructions", stars: 5 },
-    { quote: "As an interior designer, having access to 50+ brands under one roof saves me enormous time. The consultation service is outstanding — they understand my clients' taste immediately.", author: "Ananya Desai", role: "Interior Designer, Studio Desai", stars: 5 },
-  ]
-  const t = testimonials[active]
 
-  return (
-    <section className="py-28 px-8 md:px-16" style={{ background: '#F5F0E8' }}>
-      <div className="max-w-screen-xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-xs font-medium tracking-[0.3em] uppercase mb-4" style={{ color: '#C9A96E' }}>Client Testimonials</p>
-          <h2 className="font-serif leading-tight" style={{ fontSize: 'clamp(36px, 5vw, 60px)', color: '#111' }}>
-            Trusted by<br /><em>Professionals</em>
-          </h2>
-        </div>
-
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Stars */}
-          <div className="flex justify-center gap-1 mb-8">
-            {Array.from({ length: t.stars }).map((_, i) => (
-              <svg key={i} width="18" height="18" viewBox="0 0 18 18" fill="#C9A96E"><path d="M9 1l2.25 4.55 5.02.73-3.63 3.54.86 5-4.5-2.37-4.5 2.37.86-5L1.73 6.28l5.02-.73z"/></svg>
-            ))}
-          </div>
-          <div className="text-5xl mb-6" style={{ color: '#C9A96E', fontFamily: 'Georgia' }}>&ldquo;</div>
-          <p className="font-serif text-xl md:text-2xl leading-relaxed mb-10" style={{ color: '#222', fontStyle: 'italic' }}>
-            {t.quote}
-          </p>
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center font-medium text-white text-lg" style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)' }}>
-              {t.author.split(' ').map(n => n[0]).join('')}
-            </div>
-            <div>
-              <p className="font-medium text-sm" style={{ color: '#111' }}>{t.author}</p>
-              <p className="text-xs mt-0.5" style={{ color: '#888' }}>{t.role}</p>
-            </div>
-          </div>
-          <div className="flex gap-3 justify-center mt-8">
-            {testimonials.map((_, i) => (
-              <button key={i} onClick={() => setActive(i)} className="rounded-full transition-all duration-300"
-                style={active === i ? { width: 28, height: 8, background: '#C9A96E' } : { width: 8, height: 8, background: '#C9C5C1' }} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // ─── ABOUT ────────────────────────────────────────────────────────────────────
 function About() {
@@ -942,7 +892,6 @@ export default function App() {
       <RoomVisualizer />
       <BeforeAfter />
       <Gallery />
-      <Testimonials />
       <About />
       <BrandMarquee />
       <Contact />
