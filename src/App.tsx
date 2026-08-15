@@ -142,19 +142,14 @@ function Hero() {
             We supply a wide range of premium ceramic tiles, sanitaryware, bath fittings, and interior surface solutions for homes, commercial projects, architects, and builders.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button
+            <a
+              href="#products"
               className="flex items-center gap-3 px-8 py-4 rounded-full text-white font-medium text-sm tracking-wide transition-all duration-300 hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)', boxShadow: '0 8px 32px rgba(201,169,110,0.4)' }}
             >
               Explore Collection
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </button>
-            <button
-              className="flex items-center gap-3 px-8 py-4 rounded-full font-medium text-sm tracking-wide transition-all duration-300 hover:scale-105"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.28)', color: 'white', backdropFilter: 'blur(10px)' }}
-            >
-              Get Free Consultation
-            </button>
+            </a>
           </div>
         </div>
         <div className="absolute bottom-8 right-8 flex flex-col items-center gap-2 opacity-40">
