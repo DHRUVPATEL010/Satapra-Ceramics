@@ -143,7 +143,7 @@ function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="#products"
+              href="#collections"
               className="flex items-center gap-3 px-8 py-4 rounded-full text-white font-medium text-sm tracking-wide transition-all duration-300 hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)', boxShadow: '0 8px 32px rgba(201,169,110,0.4)' }}
             >
