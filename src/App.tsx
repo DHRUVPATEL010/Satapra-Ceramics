@@ -55,15 +55,6 @@ function Nav() {
           ))}
         </div>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <button className="text-xs font-medium tracking-wide px-5 py-2.5 rounded-full transition-all" style={{ color: scrolled ? '#222' : 'white', border: `1px solid ${scrolled ? 'rgba(34,34,34,0.3)' : 'rgba(255,255,255,0.35)'}` }}>
-            Get Free Consultation
-          </button>
-          <button className="text-xs font-medium tracking-wide px-5 py-2.5 rounded-full" style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)', color: 'white' }}>
-            Request Quote
-          </button>
-        </div>
-
         <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="flex flex-col gap-1.5">
             {[0, 1, 2].map(i => <div key={i} className="w-6 h-0.5 rounded-full" style={{ background: scrolled ? '#222' : 'white' }} />)}
@@ -76,10 +67,6 @@ function Nav() {
           {['Home', 'Products', 'Collections', 'Brands', 'Projects', 'About Us', 'Contact'].map(item => (
             <a key={item} href="#" className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100">{item}</a>
           ))}
-          <div className="mt-4 flex gap-3">
-            <button className="flex-1 py-3 text-sm font-medium rounded-xl border border-gray-300">Consultation</button>
-            <button className="flex-1 py-3 text-sm font-medium rounded-xl text-white" style={{ background: 'linear-gradient(135deg, #C9A96E, #A07840)' }}>Request Quote</button>
-          </div>
         </div>
       )}
     </nav>
